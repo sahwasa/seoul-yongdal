@@ -1,0 +1,123 @@
+<?php
+  include "../qna_new/default.inc";
+
+  //$_addr = trim($_POST[addr]);
+  if(!$_addr) {
+         echo(" <script>
+                  window.alert('공동사업장 주소를 선택하셔야 합니다.');
+                  window.close();
+                 </script>
+               "); exit;
+  }
+
+  $connect = mysql_connect($HOSTNAME, $DBUSERNAME, $DBPASSWORD);
+  mysql_select_db($DBNAME,$connect);
+?>
+<html>
+<head>
+<title>공동사업장 현황 ::: <?=$_addr?> :::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link rel="stylesheet" href="../style/body.css">
+<style type="text/css">
+<!--
+.style2 {
+        color: #0c5fa0;
+        font-weight: bold;
+}
+.blueBold {
+        font-family: "돋움","굴림","돋움체", "바탕체", Verdana, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: #0d6ab2;
+        text-decoration: none;
+}
+
+-->
+</style>
+
+</head>
+
+<body>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="35" align="center"><img src="../images/ico06.gif" width="8" height="9"> <span class="blueBold"><?=$_addr?> 공동사업장 현황</span></td>
+  </tr>
+  <tr>
+    <td align="right"><? echo date('Y년 m월 d일 현재');?> &nbsp; </td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <tr>
+    <td align="center">
+
+      <table width="100%" align="center" border="0" cellspacing="2" cellpadding="0">
+        <tr>
+          <td align="center" bgcolor="#6b7bad">
+
+            <table width="100%" border="0" cellspacing="1" cellpadding="4">
+              <tr align="center">
+                <td rowspan="2" height="23" bgcolor="#fafafa">인정번호</td>
+                <td rowspan="2" bgcolor="#fafafa">인정 년월일</td>
+                <td rowspan="2" bgcolor="#fafafa">공동 사업자명</td>
+                <td rowspan="2" bgcolor="#fafafa">주 소</td>
+                <td rowspan="2" bgcolor="#fafafa">대표자</td>
+                <td rowspan="2" bgcolor="#fafafa">회원(수)</td>
+                <td colspan="2" bgcolor="#fafafa">전화</td>
+              </tr>
+              <tr align="center">
+                <td bgcolor="#fafafa">080</td>
+                <td bgcolor="#fafafa">일반</td>
+              </tr>
+<?
+  $m_query = "SELECT no, jibu_code, in_no, DATE_FORMAT(in_date, '%Y-%m-%d') as in_date, name ".
+             "     , h_zip, h_sido, h_gugun, h_dong, m_name, m_count1, m_count2 ".
+             "     , tel1, tel2 ".
+             " FROM business ".
+             " WHERE h_gugun LIKE '%".$_addr."%' ".
+             " ORDER BY in_no";
+  //echo($m_query);
+  //$result = mysql_query($sql, $connect);
+  $m_result = mysql_query($m_query) or die("select error1 : ".mysql_error());
+  while($m_data = mysql_fetch_array($m_result)) {
+        $m_count = $m_data[m_count1] + $m_data[m_count2];
+	$s_tel1 =  eregi_replace(",","<br>",$m_data[tel1]);
+	$s_tel2 =  eregi_replace(",","<br>",$m_data[tel2]);
+?>
+              <tr align="center">
+                <td height="22" bgcolor="#FFFFFF"><?=$m_data[in_no]?></td>
+                <td bgcolor="#FFFFFF"><?=$m_data[in_date]?></td>
+                <td bgcolor="#FFFFFF"><?=$m_data[name]?></td>
+                <td align="left" bgcolor="#FFFFFF"><?=$m_data[h_sido]?> <?=$m_data[h_gugun]?> <?=$m_data[h_dong]?></td>
+                <td bgcolor="#FFFFFF"><?=$m_data[m_name]?></td>
+                <td bgcolor="#FFFFFF"><?=$m_count?></td>
+                <td align="left" bgcolor="#FFFFFF"><?=$s_tel1?></td>
+                <td align="left" bgcolor="#FFFFFF"><?=$s_tel2?></td>
+              </tr>
+<?
+  }
+?>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</HTML>
+
+<script>
+        var width_size = document.body.scrollWidth;
+        var height_size = document.body.scrollHeight;
+        //alert(width_size);
+        var max_height_size = 750;
+
+        if(height_size>max_height_size) {
+                height_size = max_height_size;
+        }
+        resizeTo(width_size+7, height_size+100);
+</script>
+

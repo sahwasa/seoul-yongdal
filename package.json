@@ -1,0 +1,38 @@
+{
+  "name": "seoul-yongdal",
+  "version": "1.0.0",
+  "description": "서울특별시 용달화물 자동차 운송사업 협회(http://www.seoul-yongdal.or.kr/)",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahwasa/KIT-BMS.git"
+  },
+  "author": "KITValley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahwasa/KIT-BMS/issues"
+  },
+  "homepage": "https://sahwasa.github.io/KIT-BMS",
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.10",
+    "browser-sync": "^2.26.7",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "merge-stream": "^2.0.0",
+    "sass": "^1.59.3"
+  },
+  "dependencies": {
+  }
+}

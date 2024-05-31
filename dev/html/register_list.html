@@ -1,0 +1,98 @@
+@@include('../inc/layout/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/layout/header.html')
+  <main id="content" class="container">
+    @@include('../inc/snb/register.html')
+    <section class="contents">
+      <header>
+        <article class="bredcrumb">
+          <ul>
+            <li><a href="main.html">홈</a></li>
+            <li><a href="register.html">대폐차 신고</a></li>
+            <li>대폐차 신고 접수 및 이력확인</li>
+          </ul>
+        </article>
+        <div class="tit">
+          <h1>대폐차 신고 접수 및 이력확인</h1>
+        </div>
+      </header>
+      <div class="cont_body">
+        <div class="tbl_top">
+          <h1>접수이력</h1>
+          <div class="tool_wrap">
+            <a href="register_view.html" class="btn">신규신청</a>
+          </div>
+        </div>
+        <table class="tbl_default">
+          <thead>
+            <tr>
+              <th scope="col">no</th>
+              <th scope="col">접수일자</th>
+              <th scope="col">차량번호</th>
+              <th scope="col">상태</th>
+              <th scope="col">처리일자</th>
+              <th scope="col">관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>269</td>
+              <td>2024.05.14</td>
+              <td>123배1234</td>
+              <td>처리중</td>
+              <td>2024.05.24</td>
+              <td>
+                <div class="btn_wrap">
+                  <a href="" class="btn_gray">수정</a>
+                  <button type="button" class="btn_red">취소</button>                
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>269</td>
+              <td>2024.05.14</td>
+              <td>123배1234</td>
+              <td>취소</td>
+              <td>2024.05.24</td>
+              <td>
+                <div class="btn_wrap">
+                  <a href="" class="btn_gray">상세보기</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>269</td>
+              <td>2024.05.14</td>
+              <td>123배1234</td>
+              <td>반려</td>
+              <td>2024.05.24</td>
+              <td>
+                <div class="btn_wrap">
+                  <a href="" class="btn_gray">상세보기</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>269</td>
+              <td>2024.05.14</td>
+              <td>123배1234</td>
+              <td>처리완료</td>
+              <td>2024.05.24</td>
+              <td>
+                <div class="btn_wrap">
+                  <a href="" class="btn_gray">상세보기</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        @@include('../inc/layout/paginate.html')
+      </div>
+    </section>
+  </main>
+  @@include('../inc/layout/footer.html')
+</div>
+@@include('../inc/layout/script.html')
+</body>
+
+</html>
