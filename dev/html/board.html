@@ -2,12 +2,13 @@
 <div id="wrap" class="wrap">
   @@include('../inc/layout/header.html')
   <main id="content" class="container">
-    @@include('../inc/snb/about.html')
+    @@include('../inc/snb/board.html')
     <section class="contents">
       <header>
         <article class="bredcrumb">
           <ul>
             <li><a href="main.html">홈</a></li>
+            <li><a href="board.html">News &amp; Info</a></li>
             <li>공지사항</li>
           </ul>
         </article>
@@ -17,18 +18,6 @@
       </header>
       <div class="cont_body">
         <div class="tbl_top">
-          <ul class="search_list">
-            <li>
-              <select name="field">
-                <option value="body">내 용</option>   
-                <option value="title">제 목</option>   
-                <option value="name">글쓴이</option>   
-                <option value="count">조회수</option>   
-              </select>
-            </li>
-            <li><input type="text" name="s_que" title="검색어" placeholder="검색어" /></li>
-            <li><button type="button" class="btn_search">검색</button></li>
-          </ul>
           <div class="unit">오늘 : <b>0</b> &sol; 전체 : 269</div>
         </div>
         <table class="tbl_default tbl_board">
@@ -45,7 +34,7 @@
             <tr>
               <td>269</td>
               <td>운영자</td>
-              <td><img src="../images/s_file.gif"><a href="./view.php3?id=324&amp;code=gongji&amp;start=0">2024년 5월 공지사항</a></td>
+              <td><img src="../images/s_file.gif"><a href="board_view.html">2024년 5월 공지사항</a></td>
               <td>2024.05.14</td>
               <td>55</td>
             </tr>

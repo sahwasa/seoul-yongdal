@@ -191,8 +191,9 @@ td :is(.tool_wrap,.btn_wrap){justify-content:center;
 $th_border_color:#c0c0c0;
 $td_border_color:#ebebeb;
 .tbl_top{display:flex;align-items:center;@include dot();gap:5px;margin-bottom:5px;
+  &:has(.unit:only-child){&::before{display:none;}}
   .unit{margin-left:auto;color:#777;}
-  .tool_wrap,.btn_wrap,{margin-left:auto;}
+  .tool_wrap,.btn_wrap{margin-left:auto;}
 }
 .tbl_default{width:100%;text-align:center;border-top:2px solid $th_border_color;
   th,td{border:1px solid $th_border_color;border-width:1px 1px 1px 0;padding:7px 5px;letter-spacing:-.333px;word-break:keep-all;white-space:initial;vertical-align:middle;    text-align:center;
@@ -233,7 +234,7 @@ $td_border_color:#ebebeb;
   &_s{li{min-width:80px;}
     a{font-size:12px;}
   }
-  a{position:relative;right:-1px;z-index:1;display:inline-block;width:100%;border:1px solid $border-color;border-right-color:$border-on-color;text-align:center;color:#666;padding:6px;letter-spacing:-.33px;background-color:#f9fafc;
+  a{position:relative;right:-1px;z-index:1;display:inline-block;width:100%;border:1px solid $border-color;border-right-color:$border-on-color;text-align:center;color:#666;padding:6px;letter-spacing:-.33px;background-color:#f9fafc;word-break:keep-all;
   }
   .on a{color:$blue;background-color:$white;font-weight:bold;border-color:$border-on-color;border-right-color:transparent;}
 }
@@ -263,8 +264,8 @@ $td_border_color:#ebebeb;
 .file_attach{position:relative;display:flex;align-items:center;min-height:70px;border:2px dashed #ebebeb;background-color:#fff;}  
 .drop_zone,
 .attach_zone{width:100%;height:100%;align-self:flex-start;}
-.attach_list{padding:10px;}
-.attach_list li{position:relative;display:flex;gap:5px;margin-top:10px;padding:0;border-top:none;z-index:1000;text-align:left;line-height:17px;
+.attach_list{display:flex;flex-direction:column;gap:20px;padding:10px;}
+.attach_list li{position:relative;display:flex;gap:5px;padding:0;border-top:none;z-index:1000;text-align:left;line-height:17px;
   &::before,
   &::after{display:none;}
 }
