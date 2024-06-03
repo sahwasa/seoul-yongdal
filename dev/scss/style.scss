@@ -94,7 +94,9 @@
 $snbWidth:250px;
 .snb{@extend .hide_tablet;width:$snbWidth;text-align:center;overflow:hidden;flex-shrink:0;
   $border-color:#dcdcdc;
-  header{background-color:$blue;@include tit($col:#fff){height:110px;justify-content:center;};} 
+  header{background-color:$blue;@include tit($col:#fff){height:110px;justify-content:center;};
+    a:hover{color:#fff;}
+  } 
   .snb_lst{border:1px solid $border-color;
     li{color:#777;
       &:is(:hover,.on){background-color:$border-color;font-weight:600;

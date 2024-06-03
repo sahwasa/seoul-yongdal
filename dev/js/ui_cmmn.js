@@ -72,6 +72,7 @@ function menuInit(){
     preLocate=locate.split("index=")[1].split(',');
     deps1Locate=preLocate[0]-1;
     deps2Locate=preLocate[1]-1;
+    console.log(deps1Locate <= 0)
     if(deps1Locate >= 0){
       $deps1.eq(deps1Locate).addClass('on')
       .find($deps2).eq(deps2Locate).addClass('on');
