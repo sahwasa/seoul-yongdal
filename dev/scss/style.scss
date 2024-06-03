@@ -309,12 +309,24 @@ word-break:keep-all;padding:$columnGap;}
   a:hover{text-decoration:underline;}
   td{@include alignL(3);}
 }
+details{
+  summary{cursor:pointer;}
+  summary::-webkit-details-marker,
+  summary::marker{display:none;content:'';}
+  summary::before{line-height:40px;font-family:'fontello';content:'\e92c';font-size:20px;color:#fff;background-color:$mint;padding-left:10px;} // 1depth
+  &[open]>summary{min-height:43px;}
+  &[open]>summary::before{content:'\e92e';}
+}
 .consent{
   .alignC{word-spacing:3em;}
   .tool_wrap{border-top:1px solid #ccc;justify-content:center;gap:40px;padding-top:15px;}
-  &:has(#agree:checked) .btn_wrap{display:block;}
-  .btn_wrap{display:none;text-align:center;margin-top:30px;
+  &:has(#agree:checked) .ipt_wrap{display:block;}
+  .ipt_wrap{display:none;text-align:center;margin-top:30px;
     .btn{padding:10px 50px;}
+    .lst_dl{max-width:400px;grid-template-columns:1fr;margin:0 auto 40px;
+      label{min-width:80px;text-align:left;word-spacing:1.6em;}
+    }
+    @include mobile_only{flex-direction:column;gap:$columnGap;}
   }
 }
 .regist_personal .lst_dl{grid-template-columns:repeat(3, 1fr);grid-auto-rows:auto; column-gap:$columnGap;align-items:center;

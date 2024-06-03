@@ -15,30 +15,17 @@
           <h1>대폐차 신고</h1>
         </div>
       </header>
-      <div class="cont_body section_wrap">
-        <section>
-          <header class="section_tit">
-            <h1>대폐차 신고란?</h1>
-          </header>
-          <div class="box_gray">
-            <p>‘대차’와 ‘폐차’를 뜻하는 줄임말로 기존 차량은 폐차 또는 매각하고 기존 차량의 영업용 차량번호를 살려두고 신차로 대차하는 개념입니다.</p>            
-          </div>
-        </section>
-        <section>
-          <header class="section_tit">
-            <h1>대폐차 신고 유의사항</h1>
-          </header>
-          <ol class="lst_num section_body">
-            <li>협회 회원 및 취업등록을 한 사업자만 가능합니다.</li>
-            <li>대폐차 신고 → 접수 → 서류검토 → 대폐차신고시스템 입력 → 통보서발급(처리기간:3일이내)</li>
-            <li>통보서는 우편발송 또는 지부사무실에서 수령가능</li>
-          </ol>
-        </section>
-        <section>
-          <header class="section_tit">
-            <h1>대폐차 신청 전 준비서류</h1>
-          </header>
+      <div class="cont_body section_wrap">       
+        <details>
+          <summary class="section_tit" title="더보기">
+            <h1>유의사항 및 준비서류</h1>
+          </summary>
           <div class="section_body">
+            <ol class="lst_num">
+              <li>협회 회원 및 취업등록을 한 사업자만 가능합니다.</li>
+              <li>대폐차 신고 → 접수 → 서류검토 → 대폐차신고시스템 입력 → 통보서발급(처리기간:3일이내)</li>
+              <li>통보서는 우편발송 또는 지부사무실에서 수령가능</li>
+            </ol>
             <section>
               <header class="section_tit">
                 <h2>개인화물 운송사업자</h2>
@@ -82,8 +69,8 @@
             <section class="info">
               <p>대리인이 신청할 경우 : 사업자 인감증명서, 위임장(인감날인 또는 서명) 첨부</p>
             </section>
-          </div>          
-        </section>
+          </div>
+        </details>
         <section>
           <header class="section_tit">
             <h1>대폐차 신청</h1>
@@ -109,9 +96,23 @@
                   <label for="agree"><input type="radio" id="agree" name="consent">동의함</label>
                   <label for="disagree"><input type="radio" id="disagree" name="consent">동의하지 않음</label>
                 </div>
-                <div class="btn_wrap">
+                <section class="ipt_wrap">
+                  <ul class="lst_dl">
+                    <li>
+                      <label for="">차량번호</label>
+                      <input type="text" placeholder="ex.123배 1234">
+                    </li>
+                    <li>
+                      <label for="">이 름</label>
+                      <input type="text" placeholder="홍길동">
+                    </li>
+                    <li>
+                      <label for="">생년월일</label>
+                      <input type="text" placeholder="YYYYMMDD">
+                    </li>                   
+                  </ul>
                   <a href="register_list.html?index=4,1" class="btn">대폐차 신고 접수 및 신청이력 확인</a>
-                </div>
+                </section>
               </section>
             </section>
           </section>
