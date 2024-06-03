@@ -200,6 +200,9 @@ $td_border_color:#ebebeb;
   }
   th{background-color:#fff;color:#111;font-weight:600;z-index:50;}
   td{border-color:$td_border_color;color:#333;}
+  @include mobile_only{
+    th,td{word-break:break-all;}
+  }
 }
 .tbl_row{width:100%;border:2px solid $th_border_color;border-width:2px 0;font-size:13px;
   th,

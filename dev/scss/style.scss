@@ -9,6 +9,11 @@
     display:none;
   }
 }
+.hide_mobile{
+  @include mobile_only{
+    display:none;
+  }
+}
 //layout
 #wrap{position:relative;font-size:14px;color:$black;font-family:"NanumGothic","나눔고딕","Malgun Gothic","맑은고딕","Apple SD Gothic Neo","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
 .wrap{display:flex;flex-direction:column;align-items:center;width:100%;min-height:100vh;
@@ -208,8 +213,10 @@ $snbWidth:250px;
 .sign{text-align:center;line-height:2;
   .date{font-weight:600;}
 }
-.tbl_area td{@include alignL(2,true);
-  &:last-child{white-space:nowrap;}
+.tbl_area {
+  td{@include alignL(2,true);
+    &:last-child{white-space:nowrap;}
+  }
 }
 .tbl_history.tbl_row th{white-space:nowrap;text-align:left;}
 

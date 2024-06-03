@@ -55,7 +55,7 @@ function resetSelectFile(){
 function selectFile(event,fileObject,thisEl){
   let files = null;
   const file = event.target.files[0];
-
+ul 
   //다른 파일 업로드창 접근시 파일목록 초기화
   if(lastElementId !== thisEl){
 	// 게시글 수정 및 쪽지 전달시 기존 첨부파일 + 추가된 첨부파일 같이 보내야 함으로 조건 추가 / 김재구 연구원
