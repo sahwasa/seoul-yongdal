@@ -53,18 +53,10 @@ function resetSelectFile(){
   $(".attach_list:not(.file_attached .attach_list)").html(''); //file_attached 아래에 있는 경우는 이미 등록된 파일이어서 제외
 }
 function selectFile(event,fileObject,thisEl){
+ 
   let files = null;
   const file = event.target.files[0];
-ul 
-  //다른 파일 업로드창 접근시 파일목록 초기화
-  if(lastElementId !== thisEl){
-	// 게시글 수정 및 쪽지 전달시 기존 첨부파일 + 추가된 첨부파일 같이 보내야 함으로 조건 추가 / 김재구 연구원
-	// fileList == 게시글수정페이지 및 쪽지전달페이지 첨부파일 id
-	if(thisEl !== "fileList"){
-	    // resetSelectFile()
-	}
-    lastElementId = thisEl
-  }
+  //다른 파일 업로드창 접근시 파일목록
 
   if(fileObject != null){
     files = fileObject;
@@ -123,10 +115,9 @@ function addFileList(fIndex, fName, fSize, fExt, fSrc, type, thisEl){
   html += fName;
   //html += "<span class='file_size'>" + fSize + fUnit + "</span>";
   html += '<a href="#" onclick="deleteFile(' + fIndex + ',\''+thisEl+'\'); return false;" class="file_del" title="삭제">삭제</a>';
-  if (type === "image") html += "<img src='"+fSrc+"' class='attach_thumb'>";
+  if (type === "image") html += `<a href="${fSrc}" target="_blank"><img src="${fSrc}" class="attach_thumb"></a>`;
   html += "</li>";
   viewList.append(html);
-  infoView(thisEl);
 }
 
 function deleteFile(fIndex,id){
@@ -134,15 +125,8 @@ function deleteFile(fIndex,id){
   delete fList[fIndex];// 파일 배열에서 삭제
   delete fSizeList[fIndex];// 파일 사이즈 배열 삭제
   $("#fItem_" + fIndex).remove();// 업로드 파일 테이블 목록에서 삭제
-  infoView(id);
 
   const nonEmptyFiles = fList.filter(file => file !== undefined && file !== null)
   if (nonEmptyFiles.length === 0)
     $('#'+lastElementId).parent().prev().val('');
-
-}
-function infoView(id){
-  var fileList = $('#'+id+'.attach_list li').length;
-  var info = $('.drop_info');
-  (fileList == 0) ? info.show() : info.hide();
 }

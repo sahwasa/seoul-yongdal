@@ -162,6 +162,30 @@
                 <dd><input type="text" placeholder="숫자만 입력" /></dd>
                 <dt><label for="">총중량(㎏)</label></dt>
                 <dd><input type="text" placeholder="숫자만 입력" /></dd>
+                <dt>차량등록증</dt>
+                <dd class="full">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles1" type="file" data-attach="doc01" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop01" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc01" class="attach_list"></ul>
+                    </div>
+                  </div>
+                </dd>
+                <dt>등록원부(갑부)</dt>
+                <dd class="full">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles2" type="file" data-attach="doc02" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop02" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc02" class="attach_list"></ul>
+                    </div>
+                  </div>                
+                </dd>
               </dl>
             </fieldset>
             <fieldset>
@@ -183,86 +207,48 @@
                 <dd><input type="text" /></dd>
                 <dt><label for="">총중량(㎏)</label></dt>
                 <dd><input type="text" /></dd>
-              </dl>
-            </fieldset>
-          </div>
-        </section>
-        <section class="regist_attach">
-          <header class="section_tit">
-            <h2>첨부서류</h2>
-          </header>
-          <section>
-            <section class="tab_wrap">
-              <ul class="tab">
-                <li><a href="#tab01">기존차량 차량등록증</a></li>
-                <li><a href="#tab02">기존차량 등록원부 (갑부)</a></li>
-                <li><a href="#tab03">대차 차량등록증 (신차:자동차제작증)</a></li>
-                <li><a href="#tab04">대차차량 등록원부(갑부)</a></li>
-                <li><a href="#tab05">기타 서류</a></li>              
-              </ul>
-              <div class="tab_contents">
-                <section class="tab_cont" id="tab01">
-                  <div class="file_attach btn_attach">
-                    <input id="attachFiles1" type="file" data-attach="doc01" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop01" class="drop_zone">
-                      <div class="drop_info">
-                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                      </div>
-                      <ul id="doc01" class="attach_list">
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-                <section class="tab_cont" id="tab02">
-                  <div class="file_attach btn_attach">
-                    <input id="attachFiles2" type="file" data-attach="doc02" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop02" class="drop_zone">
-                      <div class="drop_info">
-                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                      </div>
-                      <ul id="doc02" class="attach_list">
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-                <section class="tab_cont" id="tab03">
+                <dt>차량등록증</dt>
+                <dd class="full">
                   <div class="file_attach btn_attach">
                     <input id="attachFiles3" type="file" data-attach="doc03" name="file" title="파일첨부하기" class="btn_file" multiple>
                     <div id="file-drop04" class="drop_zone">
                       <div class="drop_info">
                         <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
                       </div>
-                      <ul id="doc03" class="attach_list">
-                      </ul>
+                      <ul id="doc03" class="attach_list"></ul>
                     </div>
                   </div>
-                </section>
-                <section class="tab_cont" id="tab04">
+                </dd>
+                <dt>등록원부(갑부)</dt>
+                <dd class="full">
                   <div class="file_attach btn_attach">
                     <input id="attachFiles4" type="file" data-attach="doc04" name="file" title="파일첨부하기" class="btn_file" multiple>
                     <div id="file-drop04" class="drop_zone">
                       <div class="drop_info">
                         <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
                       </div>
-                      <ul id="doc04" class="attach_list">
-                      </ul>
+                      <ul id="doc04" class="attach_list"></ul>
                     </div>
                   </div>
-                </section>
-                <section class="tab_cont" id="tab05">
-                  <div class="file_attach btn_attach">
-                    <input id="attachFiles5" type="file" data-attach="doc05" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop05" class="drop_zone">
-                      <div class="drop_info">
-                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                      </div>
-                      <ul id="doc05" class="attach_list">
-                      </ul>
-                    </div>
-                  </div>
-                </section>
+                </dd>
+              </dl>
+            </fieldset>
+          </div>
+        </section>
+        <section class="regist_attach">
+          <header class="section_tit">
+            <h2>기타 첨부서류</h2>
+          </header>
+          <section>
+            <div class="file_attach btn_attach">
+              <input id="attachFiles5" type="file" data-attach="doc05" name="file" title="파일첨부하기" class="btn_file" multiple>
+              <div id="file-drop05" class="drop_zone">
+                <div class="drop_info">
+                  <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                </div>
+                <ul id="doc05" class="attach_list"></ul>
               </div>
-            </section>
+            </div>
             <section class="info">
               <em>자동차등록원부는 7일 이내 교부된 것만 유효함.</em>
               <p>자세한 문의사항은 본부 및 지부사무실로 문의.</p>

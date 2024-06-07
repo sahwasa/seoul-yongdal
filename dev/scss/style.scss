@@ -358,6 +358,7 @@ details{
   figure{position:relative;padding:5px;flex-direction:column;margin:30px 0;
     figcaption{position:absolute;top:-25px;left:0;width:100%;display:flex;gap:5px;align-items:center;justify-content:flex-start;@include dot($mint);}
   }
+  .info{margin-top:10px;}
 }
 .info.reject{background-color:lighten($color:$red, $amount:42);color:$red;
   em{text-decoration:none;}

@@ -171,6 +171,7 @@ td :is(.tool_wrap,.btn_wrap){justify-content:center;
     &::after{content:":";margin-left:5px;}
   }
   li{display:flex;gap:10px;align-items:center;}
+  .full{grid-column:1 / span 2;}
 }
 .lst_default{@include flex_ver;gap:5px;
   dt{font-weight:600;
@@ -270,12 +271,12 @@ $td_border_color:#ebebeb;
   &::after{display:none;}
 }
 .file_attach:hover{border-color:#ccc;}
-.file_attach .drop_info{position:absolute;left:0;top:50%;transform:translateY(-50%);display:flex;gap:30px;align-items:center; color:#989898;text-align:left;word-break:keep-all;font-size:12px;line-height:15px;letter-spacing:-.3px;padding:0 15px;
+.file_attach .drop_info{display:none;position:absolute;left:0;top:50%;transform:translateY(-50%);gap:30px;align-items:center; color:#989898;text-align:left;word-break:keep-all;font-size:12px;line-height:15px;letter-spacing:-.3px;padding:0 15px;
   &::before{display:flex;align-items:center;width:101px;height:36px;border:2px solid #d83d48;border-radius:5px;background:url(../images/ic-file.png) 11px 50% no-repeat,#fff;content:"파일선택";color:#f05050;padding:0 14px 0 43px;}
   p{flex-grow:1;}
   span{color:#000;}
-  @include mobile_only{flex-direction:column;p{text-align:center;}}
 }
+.file_attach:has(.attach_list:empty) .drop_info{display:flex;}
 .attach_thumb{display:block;max-width:20px;max-height:20px;}
 .btn_file_wrap,
 .file_attach{overflow:hidden;position:relative;text-align:center;}
