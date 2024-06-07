@@ -1,0 +1,204 @@
+@@include('../inc/layout/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/layout/header.html')
+  <main id="content" class="container">
+    @@include('../inc/snb/register.html')
+    <section class="contents">
+      <header>
+        <article class="bredcrumb">
+          <ul>
+            <li><a href="main.html">홈</a></li>
+            <li><a href="register.html">대폐차 신고</a></li>
+            <li>대폐차 신고 신규신청</li>
+          </ul>
+        </article>
+        <div class="tit">
+          <h1>대폐차 신고 신규신청</h1>
+        </div>
+      </header>
+      <div class="cont_body section_wrap">
+        <section class="post_top">
+          <a href="register_list.html" class="btn_gray">목록</a>
+          <div class="tool">
+            <button type="button" class="btn_gray">수정 or 저장</button>
+            <button type="button" class="btn_red">삭제</button>
+            <button type="button" class="btn">제출하기</button>
+          </div>
+        </section>
+        <section class="info reject">
+          <em>반려사유</em>
+          <p>자세한 문의사항은 본부 및 지부사무실로 문의.</p>
+        </section>
+        <section class="regist_personal">
+          <header class="section_tit">
+            <h2>인적사항</h2>
+          </header>
+          <ul class="lst_dl">
+            <li>
+              <label for="">차량번호</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">이 름</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">생년월일</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">전화번호</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">주 소</label>
+              <input type="text" />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <header class="section_tit">
+            <h2>신고내용</h2>
+          </header>
+          <div class="regist_desc">
+            <fieldset>
+              <legend>변경 전</legend>
+              <dl class="lst_dl">
+                <dt><label for="">차 명</label></dt>
+                <dd><input type="text" placeholder="ex. 포터2" /></dd>
+                <dt><label for="">차 종</label></dt>
+                <dd><input type="text" placeholder="ex.소형 화물"/></dd>
+                <dt><label for="">유 형</label></dt>
+                <dd><input type="text" placeholder="ex.일반형 화물자동차"/></dd>
+                <dt><label for="">세부유형</label></dt>
+                <dd><input type="text" placeholder="ex. 일반카고트럭류" /></dd>
+                <dt><label for="">차대번호</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">연 식</label></dt>
+                <dd><input type="text" placeholder="ex.YYYYMMDD" /></dd>
+                <dt><label for="">최대적재량(㎏)</label></dt>
+                <dd><input type="text" placeholder="숫자만 입력" /></dd>
+                <dt><label for="">총중량(㎏)</label></dt>
+                <dd><input type="text" placeholder="숫자만 입력" /></dd>
+              </dl>
+            </fieldset>
+            <fieldset>
+              <legend>변경 후</legend>
+              <dl class="lst_dl">
+                <dt><label for="">차 명</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">차 종</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">유 형</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">세부유형</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">차대번호</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">연 식</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">최대적재량(㎏)</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">총중량(㎏)</label></dt>
+                <dd><input type="text" /></dd>
+              </dl>
+            </fieldset>
+          </div>
+        </section>
+        <section class="regist_attach">
+          <header class="section_tit">
+            <h2>첨부서류</h2>
+          </header>
+          <section>
+            <section class="tab_wrap">
+              <ul class="tab">
+                <li><a href="#tab01">기존차량 차량등록증</a></li>
+                <li><a href="#tab02">기존차량 등록원부 (갑부)</a></li>
+                <li><a href="#tab03">대차 차량등록증 (신차:자동차제작증)</a></li>
+                <li><a href="#tab04">대차차량 등록원부(갑부)</a></li>
+                <li><a href="#tab05">기타 서류</a></li>              
+              </ul>
+              <div class="tab_contents">
+                <section class="tab_cont" id="tab01">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles1" type="file" data-attach="doc01" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop01" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc01" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab_cont" id="tab02">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles2" type="file" data-attach="doc02" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop02" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc02" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab_cont" id="tab03">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles3" type="file" data-attach="doc03" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop04" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc03" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab_cont" id="tab04">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles4" type="file" data-attach="doc04" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop04" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc04" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+                <section class="tab_cont" id="tab05">
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles5" type="file" data-attach="doc05" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop05" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc05" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+            <section class="info">
+              <em>자동차등록원부는 7일 이내 교부된 것만 유효함.</em>
+              <p>자세한 문의사항은 본부 및 지부사무실로 문의.</p>
+            </section>
+          </section>
+        </section>        
+      </div>
+    </section>
+  </main>
+  @@include('../inc/layout/footer.html')
+</div>
+<script src="../js/file_upload.js"></script>
+@@include('../inc/layout/script.html')
+<script>
+  $('.drop_zone').each((idx,el) =>{
+    fileDropEvt(el);
+  })
+</script>
+</body>
+
+</html>

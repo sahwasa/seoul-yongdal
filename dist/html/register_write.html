@@ -101,17 +101,41 @@
       <div class="cont_body section_wrap">
         <section class="post_top">
           <a href="register_list.html" class="btn_gray">목록</a>
+          <div class="tool">
+            <button type="button" class="btn_gray">수정 or 저장</button>
+            <button type="button" class="btn_red">삭제</button>
+            <button type="button" class="btn">제출하기</button>
+          </div>
+        </section>
+        <section class="info reject">
+          <em>반려사유</em>
+          <p>자세한 문의사항은 본부 및 지부사무실로 문의.</p>
         </section>
         <section class="regist_personal">
           <header class="section_tit">
             <h2>인적사항</h2>
           </header>
           <ul class="lst_dl">
-            <li><strong>차량번호</strong>123배 1234</li>
-            <li><strong>이 름</strong>홍길동</li>
-            <li><strong>생년월일</strong>19990101</li>
-            <li><strong>전화번호</strong>010-1234-5678</li>
-            <li><strong>주 소</strong>산골짜기 다람쥐 아기다람쥐</li>
+            <li>
+              <label for="">차량번호</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">이 름</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">생년월일</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">전화번호</label>
+              <input type="text" />
+            </li>
+            <li>
+              <label for="">주 소</label>
+              <input type="text" />
+            </li>
           </ul>
         </section>
         <section>
@@ -122,27 +146,43 @@
             <fieldset>
               <legend>변경 전</legend>
               <dl class="lst_dl">
-                <dt><strong>차 명</strong></dt><dd> 포터2</dd>
-                <dt><strong>차 종</strong></dt><dd>소형 화물</dd>
-                <dt><strong>유 형</strong></dt><dd>일반형 화물자동차</dd>
-                <dt><strong>세부유형</strong></dt><dd>일반카고트럭류</dd>
-                <dt><strong>차대번호</strong></dt><dd>1234564789012345</dd>
-                <dt><strong>연 식</strong></dt><dd>YYYYMMDD</dd>
-                <dt><strong>최대적재량(㎏)</strong></dt><dd>1000</dd>
-                <dt><strong>총중량(㎏)</strong></dt><dd>1000</dd>
+                <dt><label for="">차 명</label></dt>
+                <dd><input type="text" placeholder="ex. 포터2" /></dd>
+                <dt><label for="">차 종</label></dt>
+                <dd><input type="text" placeholder="ex.소형 화물"/></dd>
+                <dt><label for="">유 형</label></dt>
+                <dd><input type="text" placeholder="ex.일반형 화물자동차"/></dd>
+                <dt><label for="">세부유형</label></dt>
+                <dd><input type="text" placeholder="ex. 일반카고트럭류" /></dd>
+                <dt><label for="">차대번호</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">연 식</label></dt>
+                <dd><input type="text" placeholder="ex.YYYYMMDD" /></dd>
+                <dt><label for="">최대적재량(㎏)</label></dt>
+                <dd><input type="text" placeholder="숫자만 입력" /></dd>
+                <dt><label for="">총중량(㎏)</label></dt>
+                <dd><input type="text" placeholder="숫자만 입력" /></dd>
               </dl>
             </fieldset>
             <fieldset>
               <legend>변경 후</legend>
               <dl class="lst_dl">
-                <dt><strong>차 명</strong></dt><dd> 포터2</dd>
-                <dt><strong>차 종</strong></dt><dd>소형 화물</dd>
-                <dt><strong>유 형</strong></dt><dd>일반형 화물자동차</dd>
-                <dt><strong>세부유형</strong></dt><dd>일반카고트럭류</dd>
-                <dt><strong>차대번호</strong></dt><dd>1234564789012345</dd>
-                <dt><strong>연 식</strong></dt><dd>YYYYMMDD</dd>
-                <dt><strong>최대적재량(㎏)</strong></dt><dd>1000</dd>
-                <dt><strong>총중량(㎏)</strong></dt><dd>1000</dd>
+                <dt><label for="">차 명</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">차 종</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">유 형</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">세부유형</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">차대번호</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">연 식</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">최대적재량(㎏)</label></dt>
+                <dd><input type="text" /></dd>
+                <dt><label for="">총중량(㎏)</label></dt>
+                <dd><input type="text" /></dd>
               </dl>
             </fieldset>
           </div>
@@ -162,42 +202,64 @@
               </ul>
               <div class="tab_contents">
                 <section class="tab_cont" id="tab01">
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles1" type="file" data-attach="doc01" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop01" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc01" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
                 </section>
                 <section class="tab_cont" id="tab02">
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles2" type="file" data-attach="doc02" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop02" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc02" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
                 </section>
                 <section class="tab_cont" id="tab03">
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles3" type="file" data-attach="doc03" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop04" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc03" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
                 </section>
                 <section class="tab_cont" id="tab04">
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles4" type="file" data-attach="doc04" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop04" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc04" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
                 </section>
                 <section class="tab_cont" id="tab05">
-                  <figure>
-                    <figcaption>파일명</figcaption>
-                    <img src="http://placehold.it/800x1200" alt="파일명">		
-                  </figure>
+                  <div class="file_attach btn_attach">
+                    <input id="attachFiles5" type="file" data-attach="doc05" name="file" title="파일첨부하기" class="btn_file" multiple>
+                    <div id="file-drop05" class="drop_zone">
+                      <div class="drop_info">
+                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
+                      </div>
+                      <ul id="doc05" class="attach_list">
+                      </ul>
+                    </div>
+                  </div>
                 </section>
               </div>
             </section>
@@ -206,7 +268,7 @@
               <p>자세한 문의사항은 본부 및 지부사무실로 문의.</p>
             </section>
           </section>
-        </section>
+        </section>        
       </div>
     </section>
   </main>

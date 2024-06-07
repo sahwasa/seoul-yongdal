@@ -353,16 +353,22 @@ details{
 .regist_attach{
   .tab{flex-shrink:1;max-width:230px;}
   .tab_wrap{margin-bottom:15px;;}
-  .tab_contents{min-width:230px;}
+  .tab_contents{min-width:230px;max-height:80vh;overflow-y:auto;}
   .tab_cont,.file_attach{height:100%;}
+  figure{position:relative;padding:5px;flex-direction:column;margin:30px 0;
+    figcaption{position:absolute;top:-25px;left:0;width:100%;display:flex;gap:5px;align-items:center;justify-content:flex-start;@include dot($mint);}
+  }
 }
-.post_top{@include flex_between;background-color:$gray;padding:5px;margin-bottom:15px;}
+.info.reject{background-color:lighten($color:$red, $amount:42);color:$red;
+  em{text-decoration:none;}
+}
+.post_top{@include flex_between;background-color:$gray;padding:5px;margin-bottom:15px;position:sticky;left:0;top:0;z-index:20;}
 .post{
   .tit{@include tit();flex-direction:column;align-items:stretch;gap:10px;margin-bottom:15px;
     h1{padding:0 5px;}
   }
   .writer{display:flex;gap:5px;border-bottom:1px solid #ccc;padding:0 5px 10px;font-size:12px;}
-  .date{align-self:flex-end;margin-left:auto;}
+  .date,.tool{align-self:flex-end;margin-left:auto;}
 }
 .post_view{padding:5px;
   .file_attached{border:1px solid #ccc;margin-bottom:10px;}
