@@ -10,6 +10,7 @@ var lastElementId = null; //마지막 접근 파일 업로드 요소 id
 function fileDropEvt(el){
   var file_drop = $(el);
   var file_ipt = file_drop.prev('[data-attach]');
+  addInfo(file_drop);
   file_ipt.off('change').on('change',function(e){
     var files = e.target.files;
     var thisEl = e.target.dataset.attach;
@@ -105,17 +106,18 @@ function addFileList(fIndex, fName, fSize, fExt, fSrc, type, thisEl){
   var viewList =  $('#'+thisEl);
   var html = "";
   var fUnit = "KB";
+  console.log(fSrc)
   if(fSize > 1024){
     fSize = fSize / 1024;
     fUnit = "MB";
   }
   fSize = Math.floor(fSize*100)/100;
-  html += "<li id='fItem_" + fIndex + "'>";  
-  //html += "<i class='ico_ext ext_" + fExt + "'></i>";
-  html += fName;
-  //html += "<span class='file_size'>" + fSize + fUnit + "</span>";
-  html += '<a href="#" onclick="deleteFile(' + fIndex + ',\''+thisEl+'\'); return false;" class="file_del" title="삭제">삭제</a>';
-  if (type === "image") html += `<a href="${fSrc}" target="_blank"><img src="${fSrc}" class="attach_thumb"></a>`;
+  html += `<li id='fItem_${fIndex}'>`;  
+  //html += `<i class='ico_ext ext_" + fExt + "'></i>`;
+  html += `<a href="${fSrc}" download>${fName}</a>`;
+  //html += `<span class='file_size'>" + fSize + fUnit + "</span>`;
+  html += `<a href="#" onclick="deleteFile(${fIndex},\'${thisEl}\'); return false;" class="file_del" title="삭제">삭제</a>`;
+  if (type === "image") html += `<a href="javascript:zoomOpen('${fSrc}','${fName}');"><img src="${fSrc}" class="attach_thumb"></a>`;
   html += "</li>";
   viewList.append(html);
 }
@@ -129,4 +131,35 @@ function deleteFile(fIndex,id){
   const nonEmptyFiles = fList.filter(file => file !== undefined && file !== null)
   if (nonEmptyFiles.length === 0)
     $('#'+lastElementId).parent().prev().val('');
+}
+
+function addInfo(thisEl){
+  var tmpl =`<div class="drop_info">
+              <p>여기에 <em>파일을 드래그</em> 하거나 <em>클릭하여</em> 파일을 선택해주세요!</p>
+            </div>`;
+  thisEl.append(tmpl);
+}
+const createPop = () => {
+  const zoomWrap = document.createElement('div')
+  zoomWrap.id = 'zoom_wrap';
+  zoomWrap.setAttribute('class','zoom_wrap');
+  document.body.appendChild(zoomWrap)
+  return zoomWrap
+}
+function zoomOpen(fSrc,fName){
+  let pop;
+  // 원본보기 생성
+  if($('#zoom_wrap').length == 0){
+    pop = createPop()
+  }else{
+    pop = document.getElementById('zoom_wrap');
+  }
+  var tmpl = `
+  <button type="button" class="cancel">닫기</button>
+  <figure class="zoomImg"><img src="${fSrc}"><figcaption>${fName}</figcaption></figure>`  
+  pop.innerHTML = tmpl;
+  pop.addEventListener('click',function(event){
+    if(event.target.tagName.toLowerCase() != 'img') pop.style.display = 'none';
+  });
+  pop.style.display = 'block';
 }

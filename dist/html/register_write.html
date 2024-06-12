@@ -166,22 +166,24 @@
                 <dd class="full">
                   <div class="file_attach btn_attach">
                     <input id="attachFiles1" type="file" data-attach="doc01" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop01" class="drop_zone">
-                      <div class="drop_info">
-                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                      </div>
-                      <ul id="doc01" class="attach_list"></ul>
-                    </div>
+                    <ul id="doc01" class="attach_list">
+                      <li id="fItem_0">
+                        <a href="blob:http://localhost:3002/a5754899-b02f-4951-8f15-710de47bfd14" download>storyboard.pptx</a>
+                        <a href="#" onclick="deleteFile(0,'doc03'); return false;" class="file_del" title="삭제">삭제</a>
+                      </li>
+                      <li id="fItem_1">
+                        <a href="blob:http://localhost:3002/3d98fe60-7afe-4dea-b322-19ec97440236" download>ico.png</a>
+                        <a href="#" onclick="deleteFile(1,'doc03'); return false;" class="file_del" title="삭제">삭제</a>
+                        <a href="javascript:zoomOpen('blob:http://localhost:3002/3d98fe60-7afe-4dea-b322-19ec97440236','ico.png');"><img src="blob:http://localhost:3002/3d98fe60-7afe-4dea-b322-19ec97440236" class="attach_thumb"></a>
+                      </li>
+                    </ul>
                   </div>
                 </dd>
                 <dt>등록원부(갑부)</dt>
                 <dd class="full">
                   <div class="file_attach btn_attach">
                     <input id="attachFiles2" type="file" data-attach="doc02" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop02" class="drop_zone">
-                      <div class="drop_info">
-                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                      </div>
+                    <div id="file-drop02" class="drop_zone">                     
                       <ul id="doc02" class="attach_list"></ul>
                     </div>
                   </div>                
@@ -211,7 +213,7 @@
                 <dd class="full">
                   <div class="file_attach btn_attach">
                     <input id="attachFiles3" type="file" data-attach="doc03" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop04" class="drop_zone">
+                    <div id="file-drop03" class="drop_zone">
                       <div class="drop_info">
                         <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
                       </div>
@@ -223,10 +225,7 @@
                 <dd class="full">
                   <div class="file_attach btn_attach">
                     <input id="attachFiles4" type="file" data-attach="doc04" name="file" title="파일첨부하기" class="btn_file" multiple>
-                    <div id="file-drop04" class="drop_zone">
-                      <div class="drop_info">
-                        <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                      </div>
+                    <div id="file-drop04" class="drop_zone">                      
                       <ul id="doc04" class="attach_list"></ul>
                     </div>
                   </div>
@@ -242,10 +241,7 @@
           <section>
             <div class="file_attach btn_attach">
               <input id="attachFiles5" type="file" data-attach="doc05" name="file" title="파일첨부하기" class="btn_file" multiple>
-              <div id="file-drop05" class="drop_zone">
-                <div class="drop_info">
-                  <p>여기에 <span>파일을 드래그</span> 하거나 <span> 클릭하여</span> 파일을 선택해주세요!</p>
-                </div>
+              <div id="file-drop05" class="drop_zone">               
                 <ul id="doc05" class="attach_list"></ul>
               </div>
             </div>
