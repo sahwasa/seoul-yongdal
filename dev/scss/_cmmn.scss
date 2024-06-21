@@ -289,10 +289,11 @@ $td_border_color:#ebebeb;
 .file_del{@include shape(15px,17px);flex-shrink:0;
   &::before{@include fontello('\e928');font-size:13px;color:$red;line-height:17px;} 
 }
-.file_attached{position:relative;border:2px dashed #ebebeb;
+.file_attached{position:relative;border:1px solid #ebebeb;
   .attach_list li a{display:flex;gap:7px;
     &:hover{text-decoration:underline;}
     &.preview{flex-shrink:0;}
+    &.download{}
   }
   i{flex-shrink:0;position:relative;top:1px;}  
 }
